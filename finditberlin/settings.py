@@ -25,7 +25,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z+^zr1ueu@65bbxy_@699u+$uio_15f0nn7kjc-xiyqt*t0v&c'
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -93,7 +92,7 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.gitpod.io",
+    "https://ferchapombo-finditberli-j5jo6ppr7d9.ws-eu108.gitpod.io/",
     "https://*.herokuapp.com"
 ]
 
