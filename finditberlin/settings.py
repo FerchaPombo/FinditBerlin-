@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True 
 
 ALLOWED_HOSTS = ['8000-ferchapombo-finditberli-j5jo6ppr7d9.ws-eu108.gitpod.io',
-                ".herokuapp.com", "https://ferchapombo-finditberli-j5jo6ppr7d9.ws-eu108.gitpod.io/"
+                "finditberlin4.herokuapp.com", 'localhost', "https://ferchapombo-finditberli-j5jo6ppr7d9.ws-eu108.gitpod.io/","gitpod.io"
 ]
 
 
@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'finditberlin.urls'
@@ -92,8 +93,10 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 CSRF_TRUSTED_ORIGINS = [
-    "https://ferchapombo-finditberli-j5jo6ppr7d9.ws-eu108.gitpod.io/",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "https://*gitpod.io",
+    'https://*gitpod.io/start/#ferchapombo-finditberli-j5jo6ppr7d9',
+    'https://*ferchapombo-finditberli-j5jo6ppr7d9.ws-eu108.gitpod.io/'
 ]
 
 # Password validation
