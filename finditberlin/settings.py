@@ -92,12 +92,8 @@ WSGI_APPLICATION = 'finditberlin.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.herokuapp.com",
-    "https://*gitpod.io",
-    'https://*gitpod.io/start/#ferchapombo-finditberli-j5jo6ppr7d9',
-    'https://*ferchapombo-finditberli-j5jo6ppr7d9.ws-eu108.gitpod.io/'
-]
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-ferchapombo-finditberli-j5jo6ppr7d9.ws-eu108.gitpod.io', 'http://*herokuapp.com']
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
